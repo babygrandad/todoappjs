@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- form container -->
+        <div id="formContainer">
+            <form id="taskForm" class="spacing">
+                <h2>Add a todo</h2>
+                    <input type="text" required="true" placeholder="Task discription" name="taskInput" id="taskInput">
+                    <label for="dateInput">Pick a due date</label>
+                    <input type="date" required="true" name="dateInput" id="dateInput">
+                <input type="submit" class="buttons" value="Add Task">
+            </form>
+        </div>
+    </header>
+    <main class="spacing centering" >
+        <h1>Todos</h1>
+        <!-- Sorting buttons -->
+        <div class="sortButtons">
+            <input type="button" class="buttons" value="Sort ASC" id="sortASC">
+            <input type="button" class="buttons" value="Sort DEC" id="sortDEC">
+        </div>
+
+        <!-- To Dos container -->
+        <div id="taskList"> 
+
+        </div>
+    </main>
+</body>
+
+</html>

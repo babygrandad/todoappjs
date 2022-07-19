@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3{
+    color: #8D1ECC;
+}
+
+header{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: #8D1ECC;
+    padding:50px 7%;
+}
+
+main{
+    padding:50px 7%;
+}
+
+span{
+    margin: 0 10px;
+}
+
+.centering{
+    text-align: center;
+}
+
+.lefting{
+    text-align: left;
+}
+
+#formContainer{
+    width: 100vw;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+#taskForm{
+    background-color: #fff;
+    border: #8D1ECC 3px solid;
+    border-radius: 15px;
+}
+
+#taskForm *{
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+}
+
+#taskForm label{
+    margin-bottom: 0;
+}
+
+#taskForm input[type=date]{
+    margin-top: 0;
+}
+
+#taskForm input[type=text], #taskForm input[type=date]{
+    border: none;
+    border-top: #fff 2px solid;
+    border-bottom: #8D1ECC 2px solid;
+    height: 24px;
+}
+
+#taskForm input[type=text]:focus, #taskForm input[type=date]:focus{
+    outline: none;
+    border: #8D1ECC 2px solid;
+    background-color: aliceblue;
+    padding-left: 2px;
+}
+
+
+#taskForm input[type=text]:hover, #taskForm input[type=date]:hover{
+    animation-name: inputHover;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+#taskForm input[type=submit]{
+    padding: 10px;
+}
+
+.emptyText{
+    color: lightgray;
+}
+
+.buttons{
+    border: none;
+    background-color: #8D1ECC;
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 30px;
+}
+
+.buttons:hover{
+    animation-name: buttonHover;
+    animation-duration: .15s;
+    animation-fill-mode: forwards;
+}
+
+#taskList{
+    margin: 50px auto 10px auto;
+    max-height: 480px;
+    overflow-y: scroll;
+    padding:0 20px 0;
+}
+
+.tasks{
+    margin: 0 auto 35px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #7f53ac;
+    background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.taskDescription{
+    font-size: 1.2rem;
+}
+
+.taskDueDate{
+    font-size: 0.915rem;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* scrollbar styling */
+/* width */
+#taskList::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+#taskList::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+/* Handle */
+#taskList::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, #7f53ac 0%, #647dee 74%); 
+    border-radius: 10px;
+}
+  
+/* styling for active editing */
+.editing{
+    outline: none;
+    border-bottom: #8D1ECC 2px solid;
+    color:  #00fbff ;
+}
+
+/* complete task styling */
+.scratchedText{
+    color:   #3e3e3e;
+}
+
+.scratched{
+    background:   #686868 ;
+}
+
+/* action buttons styling */
+.fa-pencil:hover{
+    color:   #00fbff;
+}
+
+.fa-check:hover{
+    color:   #3e3e3e;
+}
+
+.fa-trash-can:hover{
+    color:   #fe6868;
+}
+
+
+/* alimantions */
+@keyframes inputHover {
+    from{padding-left: 2px;}
+    to{padding-left: 5px;}
+}
+
+@keyframes buttonHover {
+    from{background-color: #8D1ECC;}
+    to{background-color: #647dee;}
+}
